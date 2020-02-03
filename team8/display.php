@@ -29,16 +29,25 @@ try{
 <!DOCTYPE html>
 <html>
 <head>
-<title>テーブル表示</title>
+<title>遊んでくれてありがとう</title>
 <meta charset="utf-8">
+<style>
+	body{
+			background-image: url(asset/heaven.jpg);
+			background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding-top: 50px;
+		}
+</style>
 </head>
 <body>
-<h1>テーブル表示</h1> 
+<h1>皆のクリア情報</h1> 
  
-レコード件数：<?php echo $row_count; ?>
+プレイ数：<?php echo $row_count; ?>
  
-<table border='1'>
-<tr><td>id</td><td>name</td><td>count</td><td>clear</td><td>item_id</td></tr>
+<table border='1' align="center">
+<tr><td>id</td><td>プレイヤー名</td><td>移動回数</td><td>脱出したか</td><td>ガチャアイテム</td></tr>
  
 <?php 
 foreach($rows as $row){

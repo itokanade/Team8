@@ -47,6 +47,15 @@ if(!isset($errors)){
 <head>
 <title>登録画面</title>
 <meta charset="utf-8">
+<style>
+body{
+			background-image: url(asset/heaven.jpg);
+			background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding-top: 50px;
+		}
+</style>
 </head>
 <body>
  
