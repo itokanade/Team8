@@ -18,7 +18,7 @@ if(!isset($errors)){
 	try{
         $dbh = new PDO($dsn, $user, $password);
         //$id=0;
-		$statement = $dbh->prepare("INSERT INTO PlayerInfo (name) VALUES (:name)");
+		$statement = $dbh->prepare("INSERT INTO PlayerInfo (name,clear) VALUES (:name,false)");
 	
 		if($statement){
 			$PLName = $_POST['player_name'];
@@ -49,7 +49,7 @@ if(!isset($errors)){
 <meta charset="utf-8">
 <style>
 body{
-			background-image: url(asset/heaven.jpg);
+			background-image: url(asset/hell.jpg);
 			background-size: cover;
             background-repeat: no-repeat;
             text-align: center;
