@@ -21,17 +21,43 @@
              height: 60px;
              color: black;
          }
+         #gacha_result{
+                display: none;
+            }
      </style>
 
  </head>
  <body>
      <h1 id="title">ガチャを回してね</h1>
 
-     <button>ガチャを回す</button>
-
+     <div id="gacha">
+     <button id="gacha_button">ガチャを回す</button>
+     </div>
+     <div id="gacha_result">
+     <div id="gacha_item"></div>
+    </div>
      <form action="stage1.html">
          <button id ="btn-next">ゲームSTART!</button>
          
      </form>
+
+     <script>
+         document.getElementById("gacha_button").addEventListener("click",(e)=>{
+
+        document.querySelector("#gacha").style.display = "none";
+        document.querySelector("#gacha_result").style.display = "block";
+
+        fetch("api/gacha.php")
+        .then( (res)=>{
+        return res.json();
+        })
+        .then( (json)=>{
+        document.querySelector("#gacha_item").innerHTML=json["name"];
+
+         });
+        });
+
+
+    </script>
  </body>
 </html>
